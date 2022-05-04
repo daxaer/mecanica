@@ -50,14 +50,6 @@ public class ControladorAutos : MonoBehaviour
         frontLeftWheelc.motorTorque = verticalInput * motorForce;
         frontRightWheelc.motorTorque = verticalInput * motorForce;
         currentBreakForce = isBreaking ? breakForce : 0f;
-        if(isBreaking)
-        {
-            ApplyBreaking();
-        }
-    }
-
-    private void ApplyBreaking()
-    {
         frontRightWheelc.brakeTorque = currentBreakForce;
         frontLeftWheelc.brakeTorque = currentBreakForce;
         rearLeftWheelc.brakeTorque = currentBreakForce;
